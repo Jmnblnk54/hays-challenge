@@ -1,5 +1,6 @@
 import "./uploadModal.css";
 import { Modal, Button } from "react-bootstrap";
+import { AiFillCloseSquare } from "react-icons/ai";
 
 const UploadModal = ({ modalOpen, closeModal }) => {
   return (
@@ -7,7 +8,10 @@ const UploadModal = ({ modalOpen, closeModal }) => {
       <Modal show={modalOpen} onHide={closeModal}>
         <Modal.Body>
           <div className="modal-content">
-            <div className="header">icon here, Document Upload</div>
+            <div className="header">
+              <AiFillCloseSquare />
+              icon here, Document Upload
+            </div>
             <hr />
             <div className="form-section">
               <div className="left-section">select, dropbox, toggle, etc</div>
