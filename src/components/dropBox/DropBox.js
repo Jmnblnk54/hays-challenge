@@ -47,14 +47,17 @@ const DropBox = ({ onDrop }) => {
           // }}
           {...getRootProps({ isDragAccept, isFocused, isDragReject })}
         >
-          <input {...getInputProps()} />
-          <p>
-            <HiDocumentText size={28} className="document-icon" />
-          </p>
-          <p>
-            <span className="gray-text">Drag & Drop Here Or</span>
-            <span className="blue-text"> Browse</span>
-          </p>
+          <div className="border-div">
+            <input {...getInputProps()} />
+            <p>
+              <HiDocumentText size={28} className="document-icon" />
+            </p>
+            <p className="drop-text">
+              <span className="gray-text">Drag & Drop Here Or</span>&nbsp;
+              <span className="bold blue-text"> Browse</span>
+            </p>
+          </div>
+
           <button type="button" className="button1 btn" onClick={open}>
             Upload Manifest
           </button>

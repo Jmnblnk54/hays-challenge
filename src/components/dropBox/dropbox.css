@@ -3,19 +3,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px;
-  border-width: 2px;
+  padding: 10px;
+  border: 1px solid #a0a0a0;
   border-radius: 10px;
-  border-style: solid;
-  background-color: #fafafa;
-  color: black;
-  font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 12px;
   outline: none;
-  transition: border 0.24s ease-in-out;
 }
 
 .document-icon {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #ffad33;
   /* width: 70px; */
+}
+
+.border-div {
+  width: 100%;
+  padding: 20px;
+  border: 1px dashed #a0a0a0;
+}
+
+.drop-text {
+  display: flex;
+  justify-content: center;
+}
+
+.button1 {
+  margin-top: 10px;
 }

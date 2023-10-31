@@ -2,15 +2,16 @@ import { useState } from "react";
 import "./uploadModal.css";
 import { Modal, Button, Form } from "react-bootstrap";
 import { AiFillCloseSquare } from "react-icons/ai";
-import DropBox from "../dropBox/DropBox";
+import FileDrop from "../fileDrop/FileDrop";
 import ModalFormRight from "../modalFormRight/ModalFormRight";
 import { WiTime2 } from "react-icons/wi";
+import ShowFile from "../showFile/ShowFile";
 
 const UploadModal = ({ modalOpen, closeModal }) => {
   const ImportNameSelector = () => (
     <div className="name-select-container">
       <select className="name-select">
-        <label>Select Import Name:</label>
+        <option value="">Select Import Name:</option>
         <option value="option1">Option 1</option>
         <option value="option2">Option 2</option>
         <option value="option3">Option 3</option>
@@ -21,33 +22,36 @@ const UploadModal = ({ modalOpen, closeModal }) => {
   );
   return (
     <div className="modal-container">
-      <Modal
-        className="modal-lg rounded-0"
-        show={modalOpen}
-        onHide={closeModal}
-      >
+      <Modal className="modal-xl" show={modalOpen} onHide={closeModal}>
         <Modal.Body>
           <div className="modal-content">
             <div className="head border-0">
-              <AiFillCloseSquare className="close-icon" />
+              <AiFillCloseSquare size={26} className="close-icon" />
               <h4 className="blue-text">Document Upload</h4>
+              <hr className="header-hr" />
             </div>
-            <hr className="header-hr" />
+
             <div className="form-section">
               <div className="left-section">
                 <ImportNameSelector />
-                <DropBox />
+                <hr className="left-hr" />
+                <p className="blue-text bold">
+                  Select a manifest that you'd like to import
+                </p>
+                <FileDrop />
                 <hr />
+                <ShowFile />
+                <hr />
+                <hr className="left-hr" />
                 <p className="blue-text">Elapse Data Checking:</p>
-                <p className="elapse-dates">No Elapse Dates!</p>
-                <hr />
-                <p className="blue-text">Tollerance Window:</p>
+                <p className="bold elapse-dates">No Elapse Dates!</p>
+                <hr className="left-hr" />
+                <p className="bold blue-text">Tollerance Window:</p>
                 <p>
                   <span>
                     <Form.Check // prettier-ignore
                       type="switch"
                       id="custom-switch"
-                      // label="Toggle ON"
                     />
                   </span>
                   <span>ToggleON |</span>

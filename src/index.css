@@ -24,12 +24,18 @@ code {
   border-radius: 5px;
   text-align: center;
   display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  width: 180px;
 }
 
 .button2 {
   background-color: #fff;
   color: #ffad33;
   border: 2px solid #ffad33;
+  font-size: 14px;
+  font-weight: 600;
+  width: 180px;
 }
 
 /* global text colors */
@@ -40,4 +46,8 @@ code {
 
 .gray-text {
   color: #a0a0a0;
+}
+
+.bold {
+  font-weight: 600;
 }

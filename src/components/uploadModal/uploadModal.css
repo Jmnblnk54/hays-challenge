@@ -11,7 +11,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
+  margin: 10px 0 20px 0;
 }
 
 .header-hr {
@@ -21,10 +23,14 @@
 
 .close-icon {
   position: absolute;
-  left: 10px;
+  left: -5px;
   top: 10px;
   width: 70px;
-  border-radius: 3px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: row;
 }
 
 .left-section {
@@ -35,12 +41,19 @@
 
 .name-select {
   width: 100%;
+  height: 30px;
+  color: #000080;
+  font-weight: 600;
   border-radius: 5px;
 }
 
+.left-hr {
+  width: 250px;
+}
+
 .right-section {
-  margin: 0 20px 0 10px;
-  width: 30%;
+  margin: 0 20px 0 20px;
+  width: 40%;
   display: inline-block;
 }
 

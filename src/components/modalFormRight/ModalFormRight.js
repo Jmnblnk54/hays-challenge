@@ -36,7 +36,7 @@ const ModalFormRight = () => {
   return (
     <div className="model-right-container">
       <div className="split">
-        <p className="blue-text split-text">
+        <p className="bold blue-text split-text">
           Split schedule using social distancing?
         </p>
       </div>
@@ -64,7 +64,7 @@ const ModalFormRight = () => {
         <hr className="" />
 
         <div className="location">
-          <p className="blue-text location-text">Location Checking:</p>
+          <p className="bold blue-text location-text">Location Checking:</p>
           {available ? (
             <p className="all-available">All Available!</p>
           ) : (
@@ -73,7 +73,7 @@ const ModalFormRight = () => {
         </div>
 
         <div className="client">
-          <p className="blue-text client-text">Client:</p>
+          <p className="bold blue-text client-text">Client:</p>
           <Form.Check
             inline
             label="Single"
@@ -108,7 +108,7 @@ const ModalFormRight = () => {
                   value={clientSelect[index]}
                   onChange={(e) => handleSelectChange(index, e)}
                 >
-                  <option value="">Select an option</option>
+                  <option value="">Select Client</option>
                   {generateSelectOptions(index)}
                 </select>
               </Col>
