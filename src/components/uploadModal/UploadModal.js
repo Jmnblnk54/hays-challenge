@@ -16,7 +16,7 @@ const UploadModal = ({ modalOpen, closeModal }) => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
-
+  console.log(files);
   const getData = ({
     split,
     locations,
@@ -93,7 +93,7 @@ const UploadModal = ({ modalOpen, closeModal }) => {
                 </p>
                 <FileDrop {...{ handleGetFiles }} />
                 <hr />
-                <ShowFile />
+                <ShowFile {...{ files }} />
                 <hr />
                 <hr className="left-hr" />
                 <p className="blue-text">Elapse Data Checking:</p>

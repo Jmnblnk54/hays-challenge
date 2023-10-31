@@ -2,12 +2,13 @@ import { HiOutlineDocumentText } from "react-icons/hi";
 import "./showFile.css";
 
 const ShowFile = ({ files }) => {
+  console.log("in showfile", files);
   const show = (file) => {
     return (
-      <div className="column" key={file.id}>
+      <div className="column" key={file.id + file.src}>
         <div className="file-container">
-          <HiOutlineDocumentText className="file-icon" />
-          <span className="file-name">{file.name}</span>
+          <HiOutlineDocumentText size={20} className="file-icon" />
+          <span className="file-name">{file.src}</span>
         </div>
       </div>
     );

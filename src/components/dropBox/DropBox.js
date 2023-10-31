@@ -1,7 +1,7 @@
 import { useDropzone } from "react-dropzone";
-// import styled from "styled-components";
 import "./dropbox.css";
 import { HiDocumentText } from "react-icons/hi";
+
 const getColor = (props) => {
   if (props.isDragAccept) {
     return "#00e676";
@@ -54,7 +54,10 @@ const DropBox = ({ onDrop }) => {
             </p>
             <p className="drop-text">
               <span className="gray-text">Drag & Drop Here Or</span>&nbsp;
-              <span className="bold blue-text"> Browse</span>
+              <span onClick={open} className="bold blue-text">
+                {" "}
+                Browse
+              </span>
             </p>
           </div>
 

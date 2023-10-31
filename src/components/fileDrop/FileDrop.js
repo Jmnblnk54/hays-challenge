@@ -4,7 +4,7 @@ import DropBox from "../dropBox/DropBox";
 
 const FileDrop = ({ handleGetFiles }) => {
   const [files, setFiles] = useState([]);
-
+  console.log(files);
   const onDrop = useCallback((acceptedFiles) => {
     acceptedFiles.map((file, index) => {
       const reader = new FileReader();
@@ -26,7 +26,7 @@ const FileDrop = ({ handleGetFiles }) => {
   return (
     <div className="container">
       <DropBox {...{ onDrop }} />
-      <ShowFile {...{ files }} />
+      {/* <ShowFile {...{ files }} /> */}
     </div>
   );
 };

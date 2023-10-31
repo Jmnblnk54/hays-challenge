@@ -13,3 +13,9 @@
   width: 50px;
   padding: 5px;
 }
+
+.file-name {
+  /* width: 200px; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+}
