@@ -17,7 +17,9 @@ const App = () => {
   return (
     <div className="App">
       <div className="button-container">
-        <Button onClick={openModal}>UPLOAD</Button>
+        <Button className="button1" onClick={openModal}>
+          UPLOAD
+        </Button>
       </div>
       <UploadModal {...{ modalOpen, closeModal }} />
     </div>

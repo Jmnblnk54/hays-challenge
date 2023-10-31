@@ -1,0 +1,40 @@
+.modal-container {
+  width: 70%;
+  height: 80vh;
+}
+
+.modal-content {
+  display: flex;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.close-icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 70px;
+  border-radius: 3px;
+}
+
+.left-section {
+  margin: 0 10px 0 20px;
+  display: inline-block;
+  width: 50%;
+}
+
+.name-select {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.right-section {
+  margin: 0 20px 0 10px;
+  width: 30%;
+  display: inline-block;
+}

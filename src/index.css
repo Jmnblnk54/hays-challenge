@@ -5,8 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* remove later!!!! */
-  border: 1px solid red;
 }
 
 code {
@@ -15,3 +13,30 @@ code {
 }
 
 @import "~bootstrap/dist/css/bootstrap.css";
+
+/* buttons */
+
+.button1 {
+  background-color: #000080;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.button2 {
+  background-color: #fff;
+  color: #ffad33;
+  border: 2px solid #ffad33;
+}
+
+/* global text colors */
+
+.blue-text {
+  color: #000080;
+}
+
+.gray-text {
+  color: #a0a0a0;
+}

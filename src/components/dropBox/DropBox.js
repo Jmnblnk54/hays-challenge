@@ -1,6 +1,6 @@
 import { useDropzone } from "react-dropzone";
-import styled from "styled-components";
-import "./imageDrop.css";
+// import styled from "styled-components";
+import "./dropbox.css";
 
 const getColor = (props) => {
   if (props.isDragAccept) {
@@ -42,15 +42,15 @@ const DropBox = ({ onDrop }) => {
       {" "}
       <section className="dropbox">
         <div
-          className="dropbox-container dropbox"
+          className="box-container dropbox"
           //   style={{ `border-color: ${(props) => getColor(props)}`
           // }}
           {...getRootProps({ isDragAccept, isFocused, isDragReject })}
         >
           <input {...getInputProps()} />
           <p>Drag 'n' drop some files here</p>
-          <button type="button" className="btn" onClick={open}>
-            Click to select file
+          <button type="button" className="button1 btn" onClick={open}>
+            Upload Manifest
           </button>
         </div>
       </section>
