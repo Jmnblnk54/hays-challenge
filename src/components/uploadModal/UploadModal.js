@@ -16,7 +16,7 @@ const UploadModal = ({ modalOpen, closeModal }) => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
-  console.log(files);
+  console.log("in upload", files);
   const getData = ({
     split,
     locations,
