@@ -57,7 +57,7 @@ const ModalFormRight = () => {
           onChange={handleRadioSocialChange}
           id="inline-radio-2"
         />
-        <hr className="" />
+        <hr className="right-hr" />
 
         <div className="location">
           <p className="bold blue-text location-text">Location Checking:</p>
@@ -67,6 +67,7 @@ const ModalFormRight = () => {
             <p className="not-available">Not Available!</p>
           )}
         </div>
+        <hr className="right-hr" />
 
         <div className="client">
           <p className="bold blue-text client-text">Client:</p>
@@ -108,8 +109,8 @@ const ModalFormRight = () => {
                   {SelectOptions}
                 </select>
               </Col>
-              <Col>
-                <WiTime2 size={20} />
+              <Col className="testing">
+                <WiTime2 className="testing-text" size={20} />
               </Col>
             </Row>
           ))}

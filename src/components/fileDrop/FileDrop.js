@@ -1,8 +1,8 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
 import ShowFile from "../showFile/ShowFile";
 import DropBox from "../dropBox/DropBox";
 
-const FileDrop = () => {
+const FileDrop = ({ handleGetFiles }) => {
   const [files, setFiles] = useState([]);
 
   const onDrop = useCallback((acceptedFiles) => {
@@ -18,6 +18,10 @@ const FileDrop = () => {
       return file;
     });
   }, []);
+
+  useEffect(() => {
+    handleGetFiles(files);
+  }, [files]);
 
   return (
     <div className="container">

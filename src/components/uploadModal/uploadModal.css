@@ -51,6 +51,14 @@
   width: 250px;
 }
 
+.elapse {
+  color: #ff3300;
+}
+
+.no-elapse {
+  color: #00ff00;
+}
+
 .right-section {
   margin: 0 20px 0 20px;
   width: 40%;
