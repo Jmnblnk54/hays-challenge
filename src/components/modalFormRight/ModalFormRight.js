@@ -1,19 +1,44 @@
 import { useState } from "react";
 import { Form, Col, Row } from "react-bootstrap";
+import { WiTime2 } from "react-icons/wi";
 
 const ModalFormRight = () => {
   const [selectedClients, setSelectedClients] = useState([]);
+  const [clientSelect, setClientSelect] = useState(Array(4).fill(""));
+  const [radioOptionSocial, setRadioOptionSocial] = useState("Yes");
+  const [radioOptionClient, setRadioOptionClient] = useState("Single");
   const clientArray = ["Client 1", "Client 2", "Client 3", "Client 4"];
   const available = true; // update with imported data to render available locations
-  const SelectArray = () => (
-    <Row>
-      <Col></Col>
-    </Row>
-  );
+  const handleSelectChange = (index, e) => {
+    const selectedValue = e.target.value;
+    const newSelectedOptions = [...clientSelect];
+    newSelectedOptions[index] = selectedValue;
+    setClientSelect(newSelectedOptions);
+  };
+  const generateSelectOptions = (index) => {
+    return clientArray
+      .map((option) => (
+        <option key={option} value={option}>
+          {option}
+        </option>
+      ))
+      .filter((option) => option.props.value !== clientSelect[index]);
+  };
+
+  const handleRadioSocialChange = (e) => {
+    setRadioOptionSocial(e.target.value);
+  };
+
+  const handleRadioClientChange = (e) => {
+    setRadioOptionClient(e.target.value);
+  };
+
   return (
     <div className="model-right-container">
       <div className="split">
-        <p className="split-text">Split schedule using social distancing?</p>
+        <p className="blue-text split-text">
+          Split schedule using social distancing?
+        </p>
       </div>
       <div className="radio">
         <Form.Check
@@ -21,19 +46,25 @@ const ModalFormRight = () => {
           label="Yes"
           name="yes"
           type="radio"
+          value="Yes"
+          checked={radioOptionSocial === "Yes"}
           id="inline-radio-1"
+          onChange={handleRadioSocialChange}
         />
         <Form.Check
           inline
           label="No"
           name="no"
+          value="No"
           type="radio"
+          checked={radioOptionSocial === "No"}
+          onChange={handleRadioSocialChange}
           id="inline-radio-2"
         />
-        <br />
+        <hr className="" />
 
         <div className="location">
-          <p className="location-text">Location Checking:</p>
+          <p className="blue-text location-text">Location Checking:</p>
           {available ? (
             <p className="all-available">All Available!</p>
           ) : (
@@ -42,27 +73,50 @@ const ModalFormRight = () => {
         </div>
 
         <div className="client">
-          <p className="client-text">Client:</p>
+          <p className="blue-text client-text">Client:</p>
           <Form.Check
             inline
             label="Single"
             name="single"
+            value="Single"
             type="radio"
+            checked={radioOptionClient === "Single"}
+            onChange={handleRadioClientChange}
             id="inline-radio-1"
           />
           <Form.Check
             inline
             label="Multiple"
             name="multiple"
+            value="Multiple"
             type="radio"
+            checked={radioOptionClient === "Multiple"}
+            onChange={handleRadioClientChange}
             id="inline-radio-2"
           />
         </div>
         <div className="selects-section">
-          <Row>
-            <Col>Testing Center1</Col>
-            <Col>selects go here</Col>
-          </Row>
+          {Array.from({ length: 4 }).map((_, index) => (
+            <Row>
+              <Col>
+                <p>{`Testing Center ${index + 1}`}</p>
+              </Col>
+              <Col>
+                <select
+                  className="client-select"
+                  key={index}
+                  value={clientSelect[index]}
+                  onChange={(e) => handleSelectChange(index, e)}
+                >
+                  <option value="">Select an option</option>
+                  {generateSelectOptions(index)}
+                </select>
+              </Col>
+              <Col>
+                <WiTime2 size={20} />
+              </Col>
+            </Row>
+          ))}
         </div>
       </div>
     </div>

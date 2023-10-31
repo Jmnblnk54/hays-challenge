@@ -14,6 +14,11 @@
   width: 100%;
 }
 
+.header-hr {
+  width: 200px;
+  margin: 0 auto;
+}
+
 .close-icon {
   position: absolute;
   left: 10px;
@@ -37,4 +42,16 @@
   margin: 0 20px 0 10px;
   width: 30%;
   display: inline-block;
+}
+
+.footer {
+  /* display: flex; */
+}
+
+.footer-text {
+  justify-content: center;
+}
+
+.import-buttons {
+  justify-content: center;
 }

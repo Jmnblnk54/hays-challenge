@@ -1,7 +1,7 @@
 import { useDropzone } from "react-dropzone";
 // import styled from "styled-components";
 import "./dropbox.css";
-
+import { HiDocumentText } from "react-icons/hi";
 const getColor = (props) => {
   if (props.isDragAccept) {
     return "#00e676";
@@ -48,7 +48,13 @@ const DropBox = ({ onDrop }) => {
           {...getRootProps({ isDragAccept, isFocused, isDragReject })}
         >
           <input {...getInputProps()} />
-          <p>Drag 'n' drop some files here</p>
+          <p>
+            <HiDocumentText size={28} className="document-icon" />
+          </p>
+          <p>
+            <span className="gray-text">Drag & Drop Here Or</span>
+            <span className="blue-text"> Browse</span>
+          </p>
           <button type="button" className="button1 btn" onClick={open}>
             Upload Manifest
           </button>
