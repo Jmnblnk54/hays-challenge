@@ -67,7 +67,7 @@ const UploadModal = ({ modalOpen, closeModal }) => {
             </div>
             <div className="footer">
               <div className="footer-text">
-                <p className="blue-text">
+                <p className="bold blue-text">
                   Data in the import file is correct. Please press Continue to
                   Import
                 </p>

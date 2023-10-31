@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form, Col, Row } from "react-bootstrap";
 import { WiTime2 } from "react-icons/wi";
+import "./modalFormRight.css";
 
 const ModalFormRight = () => {
   const [selectedClients, setSelectedClients] = useState([]);
@@ -15,14 +16,9 @@ const ModalFormRight = () => {
     newSelectedOptions[index] = selectedValue;
     setClientSelect(newSelectedOptions);
   };
-  const generateSelectOptions = (index) => {
-    return clientArray
-      .map((option) => (
-        <option key={option} value={option}>
-          {option}
-        </option>
-      ))
-      .filter((option) => option.props.value !== clientSelect[index]);
+
+  const SelectOptions = () => {
+    clientArray.map((client) => <option value={client}>{client}</option>);
   };
 
   const handleRadioSocialChange = (e) => {
@@ -98,8 +94,8 @@ const ModalFormRight = () => {
         <div className="selects-section">
           {Array.from({ length: 4 }).map((_, index) => (
             <Row>
-              <Col>
-                <p>{`Testing Center ${index + 1}`}</p>
+              <Col className="testing">
+                <p className="testing-text">{`Testing Center ${index + 1}`}</p>
               </Col>
               <Col>
                 <select
@@ -109,7 +105,7 @@ const ModalFormRight = () => {
                   onChange={(e) => handleSelectChange(index, e)}
                 >
                   <option value="">Select Client</option>
-                  {generateSelectOptions(index)}
+                  {SelectOptions}
                 </select>
               </Col>
               <Col>

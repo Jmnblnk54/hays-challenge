@@ -58,13 +58,23 @@
 }
 
 .footer {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 50px;
 }
 
 .footer-text {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text p {
   justify-content: center;
 }
 
 .import-buttons {
+  display: flex;
   justify-content: center;
+  align-items: center;
 }

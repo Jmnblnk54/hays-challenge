@@ -22,17 +22,24 @@ code {
   color: #fff;
   border: none;
   border-radius: 5px;
+  border: 2px solid #000080;
+  margin-right: 7px;
   text-align: center;
   display: inline-block;
   font-size: 14px;
   font-weight: 600;
   width: 180px;
+  margin-top: 0;
 }
 
 .button2 {
   background-color: #fff;
   color: #ffad33;
   border: 2px solid #ffad33;
+  border-radius: 5px;
+  margin-left: 7px;
+  text-align: center;
+  display: inline-block;
   font-size: 14px;
   font-weight: 600;
   width: 180px;

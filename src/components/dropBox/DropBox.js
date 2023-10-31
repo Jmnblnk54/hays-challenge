@@ -58,7 +58,11 @@ const DropBox = ({ onDrop }) => {
             </p>
           </div>
 
-          <button type="button" className="button1 btn" onClick={open}>
+          <button
+            type="button"
+            className="upload-button button1 btn"
+            onClick={open}
+          >
             Upload Manifest
           </button>
         </div>
