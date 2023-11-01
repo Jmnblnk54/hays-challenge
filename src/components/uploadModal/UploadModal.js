@@ -62,6 +62,7 @@ const UploadModal = ({ modalOpen, closeModal }) => {
       <select
         className="name-select"
         onChange={(e) => setImportName(e.target.value)}
+        value={importName}
       >
         <option value="">Select Import Name:</option>
         <option value="option1">Option 1</option>
