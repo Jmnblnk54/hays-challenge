@@ -16,7 +16,6 @@ const UploadModal = ({ modalOpen, closeModal }) => {
   const handleToggle = () => {
     setToggle(!toggle);
   };
-  console.log("in upload", files);
   const getData = ({
     split,
     locations,
@@ -134,8 +133,12 @@ const UploadModal = ({ modalOpen, closeModal }) => {
                 </p>
               </div>
               <div className="import-buttons">
-                <Button className="button1">Continue Import</Button>
-                <Button className="button2">Cancel</Button>
+                <Button className="button1" onClick={handleImport}>
+                  Continue Import
+                </Button>
+                <Button className="button2" onClick={closeModal}>
+                  Cancel
+                </Button>
               </div>
             </div>
           </div>
